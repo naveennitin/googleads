@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jalwa Game Landing</title>
+  <style>
+    /* Global reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* Hide mobile section by default on desktop */
+    .mobile-view {
+      display: none;
+    }
+
+    /* Mobile view layout */
+    @media (max-width: 768px) {
+      .desktop-message { display: none; }
+      .mobile-view {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: url('cccb63d4-41ee-456e-87cd-0a9cf237ae86.png') center/cover no-repeat;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      h1 {
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 24px;
+        opacity: 0.9;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 14px;
+        padding: 14px;
+        background: linear-gradient(90deg, #ff4b2b, #ff416c);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: scale(1.03);
+      }
+
+      footer {
+        margin-top: 20px;
+        font-size: 13px;
+        opacity: 0.9;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    /* Desktop message */
+    @media (min-width: 769px) {
+      .desktop-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #fff;
+        color: #111;
+        text-align: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+      .desktop-message h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      .desktop-message p {
+        font-size: 18px;
+        color: #333;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Desktop View -->
+  <div class="desktop-message">
+    <h1>This page is optimized for mobile devices.</h1>
+    <p>Please open it on your phone to continue.</p>
+  </div>
+
+  <!-- Mobile View -->
+  <div class="mobile-view">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Welcome to Jalwa Game</h1>
+      <p>Join exciting games and win rewards. Register or login to get started!</p>
+
+      <!-- Main Buttons -->
+      <a href="https://www.jalwagameapp1.com/#/register?invitationCode=46257833117" class="btn">Register</a>
+      <a href="https://www.jalwagameapp1.com" class="btn">Login</a>
+
+      <!-- Footer Buttons -->
+      <footer>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
